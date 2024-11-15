@@ -53,14 +53,14 @@ Este ejemplo esta definido en la clase principal que se muestra al ejecutar el p
    Biblioteca biblioteca = new Biblioteca();
    Libro libro1 = new Libro("4455465", ""Thinking Java 4TH Edition (ES Edition)", "Bruce Eckel", 2007, EstadoLibro.DISPONIBLE,1);
    Usuario usuario1 = new Usuario("S001", "Lenin", "lenin.garcia@mail.com", TipoUsuario.ESTUDIANTE, EstadoUsuario.ACTIVO));
-
+   
    biblioteca.agregarLibro(libro1);
    biblioteca.registrarUsuario(usuario1);
-
-// Podemos prestar un libro a un usuario, en este caso solo tenemos un libro y un usuario.
-
+   ```
+Podemos prestar un libro a un usuario, en este caso solo tenemos un libro y un usuario.
+```
 boolean prestamoExitoso = biblioteca.prestarLibro("S001", "4455465");
-
+```
 ## Referencias de estudio
 
 1. Thinking Java 4TH Edition (ES Edition), Bruce Eckel (2007)
