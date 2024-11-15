@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Usuario.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Usuario.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">me</span><span class="s2">.</span><span class="s1">leningarcia</span><span class="s2">.</span><span class="s1">biblioteca</span><span class="s2">.</span><span class="s1">modelos</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">me</span><span class="s2">.</span><span class="s1">leningarcia</span><span class="s2">.</span><span class="s1">biblioteca</span><span class="s2">.</span><span class="s1">enums</span><span class="s2">.</span><span class="s1">EstadoUsuario</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">me</span><span class="s2">.</span><span class="s1">leningarcia</span><span class="s2">.</span><span class="s1">biblioteca</span><span class="s2">.</span><span class="s1">enums</span><span class="s2">.</span><span class="s1">TipoUsuario</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Usuario </span><span class="s2">{</span>
+    <span class="s3">//Declaración de atributos de la clase Usuario como privados</span>
+    <span class="s0">private </span><span class="s1">String id</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String nombre</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String email</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">TipoUsuario tipoUsuario</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Libro</span><span class="s2">&gt; </span><span class="s1">librosPrestados</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">EstadoUsuario estadoUsuario</span><span class="s2">;</span>
+
+    <span class="s3">// Constructor</span>
+    <span class="s0">public </span><span class="s1">Usuario</span><span class="s2">(</span><span class="s1">String id</span><span class="s2">, </span><span class="s1">String nombre</span><span class="s2">, </span><span class="s1">String email</span><span class="s2">, </span><span class="s1">TipoUsuario tipoUsuario</span><span class="s2">, </span><span class="s1">EstadoUsuario estadoUsuario</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">id </span><span class="s2">= </span><span class="s1">id</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">nombre </span><span class="s2">= </span><span class="s1">nombre</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">email </span><span class="s2">= </span><span class="s1">email</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">tipoUsuario </span><span class="s2">= </span><span class="s1">tipoUsuario</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">librosPrestados </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;&gt;();</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">estadoUsuario </span><span class="s2">= </span><span class="s1">estadoUsuario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s3">// Definición de Geteers y Setters para validaciones</span>
+    <span class="s0">public </span><span class="s1">String getId</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getNombre</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">nombre</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">String getEmail</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">email</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">TipoUsuario getTipoUsuario</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">tipoUsuario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Libro</span><span class="s2">&gt; </span><span class="s1">getLibrosPrestados</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">librosPrestados</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">EstadoUsuario getEstadoUsuario</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">estadoUsuario</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setEstadoUsuario</span><span class="s2">(</span><span class="s1">EstadoUsuario estadoUsuario</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">estadoUsuario </span><span class="s2">!= </span><span class="s0">null</span><span class="s2">) {</span>
+            <span class="s0">this</span><span class="s2">.</span><span class="s1">estadoUsuario </span><span class="s2">= </span><span class="s1">estadoUsuario</span><span class="s2">;</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+<span class="s2">}</span></pre>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+<head>
+<title>Libro.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+.s5 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Libro.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">me</span><span class="s2">.</span><span class="s1">leningarcia</span><span class="s2">.</span><span class="s1">biblioteca</span><span class="s2">.</span><span class="s1">modelos</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">me</span><span class="s2">.</span><span class="s1">leningarcia</span><span class="s2">.</span><span class="s1">biblioteca</span><span class="s2">.</span><span class="s1">enums</span><span class="s2">.</span><span class="s1">EstadoLibro</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">Libro </span><span class="s2">{</span>
+    <span class="s3">//Declaración de atributos de la clase Libro como privados</span>
+    <span class="s0">private </span><span class="s1">String isbn</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String titulo</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String autor</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">aPublicacion</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">EstadoLibro estado</span><span class="s2">; </span><span class="s3">//enum: DISPONIBLE, PRESTADO, EN_REPARACION</span>
+    <span class="s0">private int </span><span class="s1">copiasDisponibles</span><span class="s2">; </span><span class="s3">//</span>
+
+    <span class="s3">//Definimos el constructor de los atributos de mi clase Libro</span>
+    <span class="s0">public </span><span class="s1">Libro </span><span class="s2">(</span><span class="s1">String isbn</span><span class="s2">, </span><span class="s1">String titulo</span><span class="s2">, </span><span class="s1">String autor</span><span class="s2">, </span><span class="s0">int </span><span class="s1">aPublicacion</span><span class="s2">, </span><span class="s1">EstadoLibro estado</span><span class="s2">, </span><span class="s0">int </span><span class="s1">copiasDisponibles</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">isbn </span><span class="s2">= </span><span class="s1">isbn</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">titulo </span><span class="s2">= </span><span class="s1">titulo</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">autor </span><span class="s2">= </span><span class="s1">autor</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">aPublicacion </span><span class="s2">= </span><span class="s1">aPublicacion</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">estado </span><span class="s2">= </span><span class="s1">estado</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">copiasDisponibles </span><span class="s2">= </span><span class="s1">copiasDisponibles</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s3">//Definición de Getter y Setters con validación</span>
+    <span class="s0">public </span><span class="s1">String getIsbn</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">isbn</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getTitulo</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">titulo</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">String getAutor</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">autor</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public int </span><span class="s1">getaPublicacion</span><span class="s2">(){</span>
+        <span class="s0">return </span><span class="s1">aPublicacion</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public </span><span class="s1">EstadoLibro getEstado</span><span class="s2">(){</span>
+        <span class="s0">return </span><span class="s1">estado</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public int </span><span class="s1">getCopiasDisponibles</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s1">copiasDisponibles</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setEstado</span><span class="s2">(</span><span class="s1">EstadoLibro estado</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">estado</span><span class="s2">!=</span><span class="s0">null</span><span class="s2">) {</span>
+            <span class="s0">this</span><span class="s2">.</span><span class="s1">estado </span><span class="s2">= </span><span class="s1">estado</span><span class="s2">; </span><span class="s3">//Muestra estado siempre y cuando sea uno de los que definimos</span>
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String toString</span><span class="s2">() {</span>
+        <span class="s0">return </span><span class="s4">&quot;Libro{&quot; </span><span class="s2">+</span>
+                <span class="s4">&quot;isbn='&quot; </span><span class="s2">+ </span><span class="s1">isbn </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                <span class="s4">&quot;, titulo='&quot; </span><span class="s2">+ </span><span class="s1">titulo </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                <span class="s4">&quot;, autor='&quot; </span><span class="s2">+ </span><span class="s1">autor </span><span class="s2">+ </span><span class="s4">'</span><span class="s0">\'</span><span class="s4">' </span><span class="s2">+</span>
+                <span class="s4">&quot;, aPublicacion=&quot; </span><span class="s2">+ </span><span class="s1">aPublicacion </span><span class="s2">+</span>
+                <span class="s4">&quot;, estado=&quot; </span><span class="s2">+ </span><span class="s1">estado </span><span class="s2">+</span>
+                <span class="s4">&quot;, copiasDisponibles=&quot; </span><span class="s2">+ </span><span class="s1">copiasDisponibles </span><span class="s2">+</span>
+                <span class="s4">'}'</span><span class="s2">;</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">setCopiasDisponibles</span><span class="s2">(</span><span class="s0">int </span><span class="s1">copiasDisponibles</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">copiasDisponibles</span><span class="s2">&gt;=</span><span class="s5">0</span><span class="s2">) {</span>
+            <span class="s0">this</span><span class="s2">.</span><span class="s1">copiasDisponibles </span><span class="s2">= </span><span class="s1">copiasDisponibles</span><span class="s2">; </span><span class="s3">//muestra las copias siempre que haya una disponible</span>
+        <span class="s2">}</span>
+
+    <span class="s2">}</span>
+
+<span class="s2">}</span></pre>
+</body>
+</html>
