@@ -1,18 +1,20 @@
 ## Introducción
 El programa que se presenta esta diseñado y desarrollado tomando como base los conceptos visto en clase, la documentación de estudio y guías o ayudas en internet.
+
 El uso de AI Generativa se ha utilizado, pero su uso ha sido limitado solo a que pueda ser de ayuda, más no que reemplace la realización del programa, esto considerando
-que mucho del código empleado se base como se mencionaba en la documentación de estudio. Adicionalmenete ya IntelliJ IDEA proporciona ayuda para identidicar errores o automatizar la
-declaración de métodos o funciones, como son constructores, setters and getters, applicados en este programa.
+que mucho del código empleado se base como se mencionaba en la documentación de estudio. 
+
+Adicionalmenete ya IntelliJ IDEA proporciona ayuda para identidicar errores o automatizar la declaración de métodos o funciones, como son constructores, setters and getters, applicados en este programa.
 
 ## Instrucciones de Compilación y Ejecución
 
 1. **Compilación**:
-   - Se puede clonar el archivo desde desde Github o descrompir desde el archivo que contiene la estrucutra de mi programa (Clona el repositorio y navega hasta la carpeta principal del proyecto.
-   - Ejecuta el siguiente comando para compilar todos los archivos `.java`:
+   - Se puede clonar el archivo desde desde Github (https://github.com/leningb/Semana3_Biibilioteca/tree/master) o se descrompir desde el archivo que contiene la estrucutra de mi programa.
+   - Desde la raiz de la arból de directorios del proyecto, se ejecuta el siguiente comando para compilar todos los archivos `.java`:
      ```bash
      javac -d bin src/main/java/me/leningarcia/biblioteca/enums/*.java src/main/java/me/leningarcia/biblioteca/modelos/*.java src/main/java/me/leningarcia/biblioteca/Main.java
      ```
-
+     
 2. **Ejecución**:
    - Considerar que debe haberse generado la carpeta `bin` en la raiz del proyecto:
    - Para ejecutar el programa, desde la misma raiz utiliza el siguiente comando:
